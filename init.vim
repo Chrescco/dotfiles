@@ -4,7 +4,7 @@ set nocompatible
 filetype off 
 "}}}
 
-" Automatically install vim-plug {{{
+" AUTOMATICALLY {{{
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -14,9 +14,17 @@ endif
 
 "}}}
 
-" PLUGINS {{{           
+" PLUGINS {{{
 call plug#begin('~/vimfiles/plugged')
 
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'onsails/lspkind-nvim'
+Plug 'kosayoda/nvim-lightbulb'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -28,28 +36,26 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'akinsho/bufferline.nvim'
-Plug 'nvim-lualine/lualine.nvim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'preservim/nerdtree' |
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 "}}}
 
 " PLUGIN REQUIRE CONFIG {{{
-
 lua require('chresco/lualine')
 lua require('chresco/bufferline')
 lua require('chresco/treesitter')
 lua require('chresco/lspinstaller')
 lua require('chresco/keybindings')
 lua require('chresco/diagnostics')
+lua require('chresco/lspconfig')
 lua require('chresco/cmp')
-
+lua require('chresco/lightbulb')
+lua require('chresco/nvimtree')
 "}}}
 
 "BASIC CONFIGURATION {{{
@@ -76,12 +82,15 @@ set fillchars+=eob:\
 set clipboard=unnamed
 set backspace=2
 set list 
+set colorcolumn=100
+autocmd FileType c setlocal shiftwidth=8 tabstop=8
+
 
 "}}}
 
 " BASIC STYLING {{{
 
-colorscheme gruvbox
+colorscheme gruvbox-material
 highlight Normal ctermbg=NONE
 
 highlight Comment cterm=italic
@@ -93,6 +102,7 @@ highlight SpellBad ctermbg=Red ctermfg=White
 highlight SpellCap cterm=NONE ctermbg=NONE
 highlight SpellRare cterm=NONE ctermbg=NONE
 highlight SpellLocal cterm=Underline ctermbg=NONE
+highlight ColorColumn guibg=#504945
 
 let g:neovide_fullscreen=v:false
 let g:neovide_transparency=0.95
@@ -125,9 +135,9 @@ let g:dashboard_custom_header = [
 let mapleader = "\<space>"
 "}}}
 
-" NERDTREE CONFIG {{{
+" NVIMTREE CONFIG {{{
 
-nnoremap <leader>b :NERDTreeFocus<CR>
+nnoremap <leader>b :NvimTreeFocus<CR>
 
 "}}}
 
@@ -177,5 +187,37 @@ let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
 
 " }}}
+
+" TOKYONIGHT  {{{
+
+" let g:tokyonight_style = "night"
+" let g:tokyonight_italic_functions = 1
+" let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+" let g:tokyonight_colors = {
+  "\ 'hint': 'orange',
+  "\ 'error': '#ff0000'
+"\ }
+
+" Load the colorscheme
+" colorscheme tokyonight
+
+"}}}
+
+" GRUVBOX MATERIAL {{{
+
+let g:gruvbox_material_palette = "material"
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_enable_italic = 1
+
+let g:gruvbox_material_statusline_style = "material"
+let g:gruvbox_material_diagnostic_text_highlight = 1
+let g:gruvbox_material_diagnostic_line_highlight = 1
+let g:gruvbox_material_diagnostic_virtual_text = 'colored'
+
+let g:gruvbox_material_better_performance = 1
+
+"}}}
 
 
