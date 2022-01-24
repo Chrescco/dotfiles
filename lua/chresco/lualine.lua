@@ -27,5 +27,5 @@ require('lualine').setup {
   extensions = {}
 }
 
-options = { theme = 'palenight' }
+options = { theme = 'tokyonight' }
 
