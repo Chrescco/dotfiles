@@ -17,3 +17,5 @@ I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 ### How it looks!
 
 ![my wallpaper](https://user-images.githubusercontent.com/39676098/149642494-5abf0613-8937-4859-a7c8-ceeaceaefbeb.png)
+
+![Uwu](file:///C:/Users/shaya/Desktop/Screenshot%202022-01-25%20120811.jpg)
