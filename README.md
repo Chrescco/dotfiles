@@ -8,8 +8,8 @@ I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 
 # Setup
 
-- ** Editor** - Neovim
+-  Editor - Neovim
 
-- ** Syntax checker** - Lsp-Config
+- Syntax checker - Lsp-Config
 
-- ** Autocomplete** - nvim-cmp
+- Autocomplete - nvim-cmp
