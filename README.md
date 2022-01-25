@@ -12,10 +12,6 @@ I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 
 -  Editor - Neovim
 
-- Syntax checker - Lsp-Config
-
-- Autocomplete - nvim-cmp
-
 - Gui client - Neovide
 
 ### How it looks!
