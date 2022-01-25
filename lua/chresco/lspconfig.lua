@@ -19,16 +19,17 @@ local on_attach = function(client, bufnr)
     vim.cmd("command! LspDiagNext lua vim.diagnostic.goto_next()")
     vim.cmd("command! LspDiagLine lua vim.diagnostic.open_float()")
     vim.cmd("command! LspSignatureHelp lua vim.lsp.buf.signature_help()")
-	buf_map(bufnr, "n", "gd", ":LspDef<CR>")
-    buf_map(bufnr, "n", "gr", ":LspRename<CR>")
-    buf_map(bufnr, "n", "gy", ":LspTypeDef<CR>")
-    buf_map(bufnr, "n", "K", ":LspHover<CR>")
-    buf_map(bufnr, "n", "[a", ":LspDiagPrev<CR>")
-    buf_map(bufnr, "n", "]a", ":LspDiagNext<CR>")
-    buf_map(bufnr, "n", "ga", ":LspCodeAction<CR>")
-    buf_map(bufnr, "n", "<Leader>a", ":LspDiagLine<CR>")
-    buf_map(bufnr, "i", "<C-x><C-x>", "<cmd> LspSignatureHelp<CR>")
-    if client.resolved_capabilities.document_formatting then
+	buf_map(0, "n", "R", "<cmd>Lspsaga rename<cr>", {silent = true, noremap = true})
+	buf_map(0, "n", "gx", "<cmd>Lspsaga code_action<cr>", {silent = true, noremap = true})
+	buf_map(0, "x", "gx", ":<c-u>Lspsaga range_code_action<cr>", {silent = true, noremap = true})
+	buf_map(0, "n", "K",  "<cmd>Lspsaga hover_doc<cr>", {silent = true, noremap = true})
+	buf_map(0, "n", "D", "<cmd>Lspsaga show_line_diagnostics<cr>", {silent = true, noremap = true})
+	buf_map(0, "n", "N", "<cmd>Lspsaga diagnostic_jump_next<cr>", {silent = true, noremap = true})
+	buf_map(0, "n", "P", "<cmd>Lspsaga diagnostic_jump_prev<cr>", {silent = true, noremap = true})
+	buf_map(0, "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>")
+	buf_map(0, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>")
+
+	if client.resolved_capabilities.document_formatting then
         vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
     end
 end
