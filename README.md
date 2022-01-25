@@ -6,6 +6,8 @@ I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 
 [**Wallpaper**](https://user-images.githubusercontent.com/39676098/149642494-5abf0613-8937-4859-a7c8-ceeaceaefbeb.png)
 
+![my wallpaper](https://user-images.githubusercontent.com/39676098/149642494-5abf0613-8937-4859-a7c8-ceeaceaefbeb.png) 
+
 # Setup
 
 -  Editor - Neovim
@@ -18,7 +20,6 @@ I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 
 ### How it looks!
 
-![my wallpaper](https://user-images.githubusercontent.com/39676098/149642494-5abf0613-8937-4859-a7c8-ceeaceaefbeb.png) 
 
 ![image](https://user-images.githubusercontent.com/98253438/150925432-107039ee-10e4-42c5-a22f-703c8cde63a3.png)
 
