@@ -5,7 +5,7 @@ My (very messy) dotfiles, that I have been configuring on *windows* for the past
 I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material) theme
 
 ## Desktop
-[Desktop](https://user-images.githubusercontent.com/39676098/149642494-5abf0613-8937-4859-a7c8-ceeaceaefbeb.png)
+[**Wallpaper**](https://user-images.githubusercontent.com/39676098/149642494-5abf0613-8937-4859-a7c8-ceeaceaefbeb.png)
 
 # Setup
 
