@@ -24,3 +24,6 @@ I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 ![image](https://user-images.githubusercontent.com/98253438/150925432-107039ee-10e4-42c5-a22f-703c8cde63a3.png)
 
 ![image](https://user-images.githubusercontent.com/98253438/150925855-fb95c850-199d-47bd-8dec-c8468603dae3.png)
+
+![image](https://user-images.githubusercontent.com/98253438/150926452-c4de5186-0f3b-4e8d-9de5-5086ee394b3d.png)
+
