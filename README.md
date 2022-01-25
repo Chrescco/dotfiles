@@ -23,3 +23,22 @@ I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 
 ![image](https://user-images.githubusercontent.com/98253438/150926452-c4de5186-0f3b-4e8d-9de5-5086ee394b3d.png)
 
+# Plugins
+
+- Autopairs
+- Bufferline-nvim
+- nvim-cmp
+- nvim-lspcongifg
+- Dashboard
+- gruvbox-material
+- lspkind-nvim
+- lualine-nvim
+- null-ls
+- nvim-lightbulb
+- lsp-installer
+- nvim-tree-lua
+- Plenary-nvim
+- Telescope-nvim
+- vim-closetag
+- vim-devicons
+- vim-vsnip
