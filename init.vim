@@ -1,3 +1,16 @@
+
+"  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+"  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+"  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+"  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+"  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+"  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
+" Neovim init file
+" Version: 0.44.0 - 2022/01/21
+" Maintainer: Chresco/Shy
+" Website: https://github.com/Chrescco 
+
+
 " REQUIRE{{{
 syntax enable
 set nocompatible
@@ -103,6 +116,7 @@ highlight SpellCap cterm=NONE ctermbg=NONE
 highlight SpellRare cterm=NONE ctermbg=NONE
 highlight SpellLocal cterm=Underline ctermbg=NONE
 highlight ColorColumn guibg=#504945
+
 
 let g:neovide_fullscreen=v:false
 let g:neovide_transparency=0.95
@@ -211,7 +225,7 @@ let g:gruvbox_material_palette = "material"
 let g:gruvbox_material_enable_bold = 1
 let g:gruvbox_material_enable_italic = 1
 
-let g:gruvbox_material_statusline_style = "material"
+let g:gruvbox_material_statusline_style = "original"
 let g:gruvbox_material_diagnostic_text_highlight = 1
 let g:gruvbox_material_diagnostic_line_highlight = 1
 let g:gruvbox_material_diagnostic_virtual_text = 'colored'
