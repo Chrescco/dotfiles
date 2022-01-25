@@ -1,7 +1,8 @@
 # Gruvbox - Neovim - Windows
 
 My (very messy) dotfiles, that I have been configuring on *windows* for the past **7** months.
-I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
+
+I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material) theme
 
 ## Desktop
 [Desktop](https://user-images.githubusercontent.com/39676098/149642494-5abf0613-8937-4859-a7c8-ceeaceaefbeb.png)
@@ -9,5 +10,7 @@ I mainly use the [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 # Setup
 
 **Editor** - Neovim
+
 **Syntax checker** - Lsp-Config
+
 **Autocomplete** - nvim-cmp
