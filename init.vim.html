@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~\\AppData\Local\nvim\init.vim.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim8.1_v2">
+<meta name="syntax" content="vim">
+<meta name="settings" content="number_lines,use_css,pre_wrap,no_foldcolumn,expand_tabs,line_ids,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="gruvbox-material">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #d4be98; background-color: #282828; }
+body { font-family: monospace; color: #d4be98; background-color: #282828; }
+* { font-size: 1em; }
+.Aqua { color: #89b482; }
+.PurpleItalic { color: #d3869b; font-style: italic; }
+.Comment { color: #928374; font-style: italic; }
+.Green { color: #a9b665; }
+.LineNr { color: #5a524c; }
+.vimCommentTitle { color: #928374; font-weight: bold; }
+.Delimiter { color: #d4be98; }
+.Grey { color: #928374; }
+.Statement { color: #ea6962; font-style: italic; }
+.Yellow { color: #d8a657; }
+.Special { color: #d8a657; }
+.Folded { color: #928374; background-color: #32302f; padding-bottom: 1px; }
+-->
+</style>
+
+<script>
+<!--
+
+/* function to open any folds containing a jumped-to line before jumping to it */
+function JumpToLine()
+{
+  var lineNum;
+  lineNum = window.location.hash;
+  lineNum = lineNum.substr(1); /* strip off '#' */
+
+  if (lineNum.indexOf('L') == -1) {
+    lineNum = 'L'+lineNum;
+  }
+  var lineElem = document.getElementById(lineNum);
+  /* Always jump to new location even if the line was hidden inside a fold, or
+   * we corrected the raw number to a line ID.
+   */
+  if (lineElem) {
+    lineElem.scrollIntoView(true);
+  }
+  return true;
+}
+if ('onhashchange' in window) {
+  window.onhashchange = JumpToLine;
+}
+
+-->
+</script>
+</head>
+<body onload='JumpToLine();'>
+<pre id='vimCodeElement'>
+<span id="L1" class="LineNr">  1 </span>
+<span id="L2" class="LineNr">  2 </span><span class="Comment">&quot;  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗</span>
+<span id="L3" class="LineNr">  3 </span><span class="Comment">&quot;  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║</span>
+<span id="L4" class="LineNr">  4 </span><span class="Comment">&quot;  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║</span>
+<span id="L5" class="LineNr">  5 </span><span class="Comment">&quot;  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║</span>
+<span id="L6" class="LineNr">  6 </span><span class="Comment">&quot;  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║</span>
+<span id="L7" class="LineNr">  7 </span><span class="Comment">&quot;  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝</span>
+<span id="L8" class="LineNr">  8 </span><span class="Comment">&quot; Neovim init file</span>
+<span id="L9" class="LineNr">  9 </span><span class="Comment">&quot;</span> <span class="vimCommentTitle">Version:</span><span class="Comment"> 0.44.0 - 2022/01/21</span>
+<span id="L10" class="LineNr"> 10 </span><span class="Comment">&quot;</span> <span class="vimCommentTitle">Maintainer:</span><span class="Comment"> Chresco/Shy</span>
+<span id="L11" class="LineNr"> 11 </span><span class="Comment">&quot;</span> <span class="vimCommentTitle">Website:</span><span class="Comment"> <a href="https://github.com/Chrescco">https://github.com/Chrescco</a> </span>
+<span id="L12" class="LineNr"> 12 </span>
+<span id="L13" class="LineNr"> 13 </span>
+<span id="L14" class="Folded"> 14 </span><span class="Folded">+--  5 lines: REQUIRE------------------------------------------------------------------------------------------------------------------------------</span>
+<span id="L19" class="LineNr"> 19 </span>
+<span id="L20" class="Folded"> 20 </span><span class="Folded">+--  9 lines: AUTOMATICALLY -----------------------------------------------------------------------------------------------------------------------</span>
+<span id="L29" class="LineNr"> 29 </span>
+<span id="L30" class="Folded"> 30 </span><span class="Folded">+-- 30 lines: PLUGINS -----------------------------------------------------------------------------------------------------------------------------</span>
+<span id="L60" class="LineNr"> 60 </span>
+<span id="L61" class="Folded"> 61 </span><span class="Folded">+-- 13 lines: PLUGIN REQUIRE CONFIG ---------------------------------------------------------------------------------------------------------------</span>
+<span id="L74" class="LineNr"> 74 </span>
+<span id="L75" class="Folded"> 75 </span><span class="Folded">+-- 29 lines: BASIC CONFIGURATION -----------------------------------------------------------------------------------------------------------------</span>
+<span id="L104" class="LineNr">104 </span>
+<span id="L105" class="Folded">105 </span><span class="Folded">+-- 20 lines: BASIC STYLING -----------------------------------------------------------------------------------------------------------------------</span>
+<span id="L125" class="LineNr">125 </span>
+<span id="L126" class="LineNr">126 </span><span class="Comment">&quot; MISC {{{</span>
+<span id="L127" class="LineNr">127 </span><span class="Statement">set</span><span class="Yellow"> </span><span class="Aqua">laststatus</span><span class="Yellow">=2</span>
+<span id="L128" class="LineNr">128 </span>
+<span id="L129" class="LineNr">129 </span><span class="Statement">set</span><span class="Yellow"> </span><span class="Aqua">guioptions</span><span class="Yellow">=Ace</span>
+<span id="L130" class="LineNr">130 </span>
+<span id="L131" class="LineNr">131 </span><span class="Statement">set</span><span class="Yellow"> </span><span class="Aqua">guifont</span><span class="Yellow">=Liga\ SFMono\ Nerd\ Font</span><span class="Grey">:</span><span class="Yellow">h14</span>
+<span id="L132" class="LineNr">132 </span>
+<span id="L133" class="LineNr">133 </span><span class="Statement">set</span><span class="Yellow"> </span><span class="Aqua">termguicolors</span>
+<span id="L134" class="LineNr">134 </span>
+<span id="L135" class="LineNr">135 </span><span class="PurpleItalic">nnoremap</span> <span class="Delimiter">&lt;</span><span class="Special">silent</span><span class="Delimiter">&gt;</span> <span class="Green">T</span><span class="Green"> :Telscope find_files</span><span class="Delimiter">&lt;</span><span class="Aqua">CR</span><span class="Delimiter">&gt;</span>
+<span id="L136" class="LineNr">136 </span>
+<span id="L137" class="LineNr">137 </span><span class="Comment">&quot;}}}</span>
+<span id="L138" class="LineNr">138 </span>
+<span id="L139" class="Folded">139 </span><span class="Folded">+-- 10 lines: DASHBOARD ---------------------------------------------------------------------------------------------------------------------------</span>
+<span id="L149" class="LineNr">149 </span>
+<span id="L150" class="Folded">150 </span><span class="Folded">+--  4 lines: MAPLEADER ---------------------------------------------------------------------------------------------------------------------------</span>
+<span id="L154" class="LineNr">154 </span>
+<span id="L155" class="Folded">155 </span><span class="Folded">+--  5 lines: NVIMTREE CONFIG ---------------------------------------------------------------------------------------------------------------------</span>
+<span id="L160" class="LineNr">160 </span>
+<span id="L161" class="Folded">161 </span><span class="Folded">+-- 46 lines: AUTOMATICALLY CLOSE TAG -------------------------------------------------------------------------------------------------------------</span>
+<span id="L207" class="LineNr">207 </span>
+<span id="L208" class="Folded">208 </span><span class="Folded">+-- 16 lines: TOKYONIGHT  -------------------------------------------------------------------------------------------------------------------------</span>
+<span id="L224" class="LineNr">224 </span>
+<span id="L225" class="Folded">225 </span><span class="Folded">+-- 14 lines: GRUVBOX MATERIAL --------------------------------------------------------------------------------------------------------------------</span>
+<span id="L239" class="LineNr">239 </span>
+<span id="L240" class="LineNr">240 </span><span class="Comment">&quot; LSPSAGA KEYMAPS {{{</span>
+<span id="L241" class="LineNr">241 </span>
+<span id="L242" class="LineNr">242 </span><span class="PurpleItalic">nnoremap</span> <span class="Delimiter">&lt;</span><span class="Special">silent</span><span class="Delimiter">&gt;</span> <span class="Green">F</span><span class="Green"> :Lspsaga lsp_finder</span><span class="Delimiter">&lt;</span><span class="Aqua">CR</span><span class="Delimiter">&gt;</span><span class="Green"> </span>
+<span id="L243" class="LineNr">243 </span><span class="PurpleItalic">nnoremap</span> <span class="Delimiter">&lt;</span><span class="Special">silent</span><span class="Delimiter">&gt;</span> <span class="Green">A</span><span class="Green"> :Lspsaga code_action</span><span class="Delimiter">&lt;</span><span class="Aqua">CR</span><span class="Delimiter">&gt;</span><span class="Green"> </span>
+<span id="L244" class="LineNr">244 </span>
+<span id="L245" class="LineNr">245 </span><span class="Comment">&quot;}}}</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

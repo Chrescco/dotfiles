@@ -30,10 +30,11 @@ endif
 " PLUGINS {{{
 call plug#begin('~/vimfiles/plugged')
 
+Plug 'folke/which-key.nvim'
+Plug 'tami5/lspsaga.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'onsails/lspkind-nvim'
-Plug 'kosayoda/nvim-lightbulb'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 Plug 'hrsh7th/cmp-vsnip'
@@ -67,8 +68,10 @@ lua require('chresco/keybindings')
 lua require('chresco/diagnostics')
 lua require('chresco/lspconfig')
 lua require('chresco/cmp')
-lua require('chresco/lightbulb')
 lua require('chresco/nvimtree')
+lua require('chresco/lspsaga')
+lua require('chresco/whichkey')
+
 "}}}
 
 "BASIC CONFIGURATION {{{
@@ -95,7 +98,7 @@ set fillchars+=eob:\
 set clipboard=unnamed
 set backspace=2
 set list 
-set colorcolumn=100
+set cursorcolumn
 autocmd FileType c setlocal shiftwidth=8 tabstop=8
 
 
@@ -115,7 +118,7 @@ highlight SpellBad ctermbg=Red ctermfg=White
 highlight SpellCap cterm=NONE ctermbg=NONE
 highlight SpellRare cterm=NONE ctermbg=NONE
 highlight SpellLocal cterm=Underline ctermbg=NONE
-highlight ColorColumn guibg=#504945
+highlight ColorColumn guibg=#Black
 
 
 let g:neovide_fullscreen=v:false
@@ -130,6 +133,9 @@ set guioptions=Ace
 set guifont=Liga\ SFMono\ Nerd\ Font:h14
 
 set termguicolors
+
+nnoremap T :Telescope find_files<CR>
+nnoremap W :WhichKey<CR>
 
 "}}}
 
@@ -231,6 +237,13 @@ let g:gruvbox_material_diagnostic_line_highlight = 1
 let g:gruvbox_material_diagnostic_virtual_text = 'colored'
 
 let g:gruvbox_material_better_performance = 1
+
+"}}}
+
+" LSPSAGA KEYMAPS {{{
+
+nnoremap <silent> F :Lspsaga lsp_finder<CR> 
+nnoremap <silent> A :Lspsaga code_action<CR> 
 
 "}}}
 
