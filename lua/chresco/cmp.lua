@@ -82,3 +82,4 @@ local kind_icons = {
   TypeParameter = ""
 }
 
+
