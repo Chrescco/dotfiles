@@ -81,5 +81,3 @@ local kind_icons = {
   Operator = "",
   TypeParameter = ""
 }
-
-

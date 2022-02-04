@@ -16,4 +16,3 @@ nkeymap("P", "<cmd>Lspsaga diagnostic_jump_prev<cr>", {silent = true, noremap = 
 nkeymap("<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>")
 nkeymap("<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<cr>")
 nkeymap("CA", "<cmd>lua require('lspsaga.action').code_action<cr>", {silent = true, noremap = true})
-
